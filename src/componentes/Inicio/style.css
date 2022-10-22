@@ -1,7 +1,6 @@
 /*-------inicio-----*/
 .inicio {
-  width: 85%;
-  margin: 0 auto;
+  margin: 0 8rem;
   padding-top: 9rem;
 }
 .content__inicio {
@@ -9,23 +8,30 @@
 }
 .inicio h1 {
   font-size: 1.5rem;
-  color: #08a05c;
+  color: var(--main-primary);
   transition: 0.3s;
 }
 .inicio h1:hover {
-  color: #056137;
+  color: var(--main-primary-hover);
 }
 .inicio img {
   display: flex;
   margin: 20px auto;
   border-radius: 6px;
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (max-width: 1100px) {
   .inicio img {
     width: 100%;
   }
   .inicio img {
-    height:30vh;
-    object-fit:cover;
+    height: 30vh;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 600px) {
+  .inicio {
+    margin: 0 1rem;
   }
 }

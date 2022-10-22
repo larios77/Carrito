@@ -2,17 +2,19 @@
 header {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 8rem;
   flex-wrap: wrap;
   position: fixed;
   box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0 2px 6px #08a05ca4;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 6px var(--main-primary);
 }
 header ul {
   display: flex;
   padding: 0;
+  align-items: center;
   margin: 0;
 }
 header ul li {
@@ -39,15 +41,18 @@ header .cart span {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--color-white);
   padding: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  background-color: red;
+  background-color: var(--color-trash);
 }
 @media only screen and (max-width: 600px) {
   header ul {
     display: none;
+  }
+  header {
+    padding: 0 1rem;
   }
 }
 @media only screen and (max-width: 425px) {

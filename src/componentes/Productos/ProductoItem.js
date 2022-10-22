@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
-import { DataContext } from '../../context/Dataprovider'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { DataContext } from "../../context/Dataprovider";
 
 const ProductoItem = ({ id, title, price, image, category }) => {
-  const value = useContext(DataContext)
-  const addCarrito = value.addCarrito
+  const value = useContext(DataContext);
+  const addCarrito = value.addCarrito;
 
   return (
     <div>
@@ -17,7 +17,7 @@ const ProductoItem = ({ id, title, price, image, category }) => {
         <div className="producto__footer">
           <h1> {title} </h1>
           <p>{category}</p>
-          <p className="price">{price}</p>
+          <p className="price">$ {price}</p>
         </div>
         <div className="button">
           <button className="btn" onClick={() => addCarrito(id)}>
@@ -26,6 +26,6 @@ const ProductoItem = ({ id, title, price, image, category }) => {
         </div>
       </div>
     </div>
-  )
-}
-export default ProductoItem
+  );
+};
+export default ProductoItem;

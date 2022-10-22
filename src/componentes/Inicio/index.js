@@ -1,7 +1,8 @@
-import React from 'react'
-import Portada from '../../images/inicio.jpg'
-import { Link } from 'react-router-dom'
-import './style.css'
+import React from "react";
+import Portada from "../../images/inicio.jpg";
+import { Link } from "react-router-dom";
+import { Slider } from "../Slider/index";
+import "./style.css";
 
 export const Inicio = () => {
   return (
@@ -12,8 +13,8 @@ export const Inicio = () => {
         </Link>
       </div>
       <div>
-        <img src={Portada} alt="portada" />
+        <Slider />
       </div>
     </div>
-  )
-}
+  );
+};

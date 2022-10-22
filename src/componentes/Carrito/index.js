@@ -1,46 +1,46 @@
-import React, { useContext } from 'react'
-import { DataContext } from '../../context/Dataprovider'
-import './style.css'
+import React, { useContext } from "react";
+import { DataContext } from "../../context/Dataprovider";
+import "./style.css";
 
 export const Carrito = () => {
-  const value = useContext(DataContext)
-  const [menu, setMenu] = value.menu
-  const [carrito, setCarrito] = value.carrito
-  const [total] = value.total
+  const value = useContext(DataContext);
+  const [menu, setMenu] = value.menu;
+  const [carrito, setCarrito] = value.carrito;
+  const [total] = value.total;
 
   const toogleFalse = () => {
-    setMenu(!menu)
-  }
-  const show1 = menu ? 'carritos show' : 'carritos'
-  const sho2 = menu ? 'carrito show' : 'carrito'
+    setMenu(!menu);
+  };
+  const show1 = menu ? "carritos show" : "carritos";
+  const sho2 = menu ? "carrito show" : "carrito";
 
-  const resta = id => {
-    carrito.forEach(item => {
+  const resta = (id) => {
+    carrito.forEach((item) => {
       if (item.id === id) {
-        item.cantidad === 1 ? (item.cantidad = 1) : (item.cantidad -= 1)
+        item.cantidad === 1 ? (item.cantidad = 1) : (item.cantidad -= 1);
       }
-      setCarrito([...carrito])
-    })
-  }
-  const suma = id => {
-    carrito.forEach(item => {
+      setCarrito([...carrito]);
+    });
+  };
+  const suma = (id) => {
+    carrito.forEach((item) => {
       if (item.id === id) {
-        item.cantidad += 1
+        item.cantidad += 1;
       }
-      setCarrito([...carrito])
-    })
-  }
-  const removeProducto = id => {
-    if (window.confirm('¿Quiere eliminar el producto?')) {
+      setCarrito([...carrito]);
+    });
+  };
+  const removeProducto = (id) => {
+    if (window.confirm("¿Quiere eliminar el producto?")) {
       carrito.forEach((item, index) => {
         if (item.id === id) {
-          item.cantidad = 1
-          carrito.splice(index, 1)
+          item.cantidad = 1;
+          carrito.splice(index, 1);
         }
-      })
-      setCarrito([...carrito])
+      });
+      setCarrito([...carrito]);
     }
-  }
+  };
   return (
     <div className={show1}>
       <div className={sho2}>
@@ -50,12 +50,12 @@ export const Carrito = () => {
         <h2>Su carrito</h2>
         <div className="carrito__center">
           {carrito.length === 0 ? (
-            <h2 style={{ textAlign: 'center', fontSize: '3rem' }}>
+            <h2 style={{ textAlign: "center", fontSize: "3rem" }}>
               Carrito Vacío
             </h2>
           ) : (
             <>
-              {carrito.map(producto => (
+              {carrito.map((producto) => (
                 <div className="carrito__item" key={producto.id}>
                   <img src={producto.image.default} alt="images" />
                   <div>
@@ -92,5 +92,5 @@ export const Carrito = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
