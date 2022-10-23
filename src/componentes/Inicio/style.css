@@ -1,7 +1,7 @@
 /*-------inicio-----*/
 .inicio {
-  margin: 0 8rem;
-  padding-top: 9rem;
+  /* margin: 0 8rem; */
+  /* padding-top: 9rem; */
 }
 .content__inicio {
   display: flex;
@@ -16,7 +16,7 @@
 }
 .inicio img {
   display: flex;
-  margin: 20px auto;
+  margin: 0px auto;
   border-radius: 6px;
   width: 100%;
   object-fit: cover;

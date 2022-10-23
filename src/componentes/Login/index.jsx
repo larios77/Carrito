@@ -1,11 +1,15 @@
 import "./style.css";
 
 export const Login = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="container">
         <form className="content_form-login">
           <div className="mb-3">
+            <h3 className="mb-3">Registrarte</h3>
             <label for="exampleInputName" className="form-label">
               Nombre
             </label>
@@ -26,8 +30,12 @@ export const Login = () => {
               id="exampleInputEmail"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleClick}
+          >
+            Registrate
           </button>
         </form>
       </div>

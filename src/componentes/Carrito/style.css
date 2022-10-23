@@ -57,8 +57,10 @@
   margin: 0 auto;
 }
 .carrito__item {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
   margin: 2rem auto;
   box-shadow: 0 2px 5px var(--text-tertiary);
@@ -84,7 +86,6 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  margin-top: 0.3rem;
 }
 .carrito__item box-icon:hover {
   fill: var(--main-primary-hover);
@@ -100,7 +101,6 @@
   width: 50px;
   height: 70px;
   fill: var(--color-black);
-  margin-top: 1.5rem;
   transition: 0.2s;
 }
 .carrito__item .remove__item box-icon:hover {

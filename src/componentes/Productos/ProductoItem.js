@@ -7,22 +7,33 @@ const ProductoItem = ({ id, title, price, image, category }) => {
   const addCarrito = value.addCarrito;
 
   return (
-    <div>
-      <div className="producto">
-        <Link to={`/producto/${id}`}>
-          <div className="producto__img">
-            <img src={image} alt="img" />
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <div class="card">
+            <img
+              src={image}
+              className="card-img-top"
+              alt="img"
+              decoding="async"
+              loading="lazy"
+              width="250px"
+              height="250px"
+              tyle={{ objectFit: "cover" }}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{title}</h5>
+              <p className="card-text text-muted fs-5 mb-2">{category}</p>
+              <p className="card-text fs-4">C$ {price}</p>
+              <button
+                className="btn btn-primary me-2"
+                onClick={() => addCarrito(id)}
+              >
+                Añadir al carrito
+              </button>
+              <button className="btn btn-secondary me-2">Ver detalles</button>
+            </div>
           </div>
-        </Link>
-        <div className="producto__footer">
-          <h1> {title} </h1>
-          <p>{category}</p>
-          <p className="price">$ {price}</p>
-        </div>
-        <div className="button">
-          <button className="btn" onClick={() => addCarrito(id)}>
-            Añadir al carrito
-          </button>
         </div>
       </div>
     </div>

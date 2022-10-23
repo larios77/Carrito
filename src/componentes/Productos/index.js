@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { DataContext } from "../../context/Dataprovider";
 import ProductoItem from "./ProductoItem";
+import Footer from "../Footer/index";
 import "./style.css";
 
 export const Productos = () => {
@@ -23,6 +24,7 @@ export const Productos = () => {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

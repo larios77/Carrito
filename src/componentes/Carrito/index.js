@@ -41,6 +41,12 @@ export const Carrito = () => {
       setCarrito([...carrito]);
     }
   };
+  // const handleBuy = () => {
+  //   console.log(carrito);
+  //   alert(`Has comprado el producto
+  //   ${carrito.title} por el precio de ${carrito.price}
+  //   `);
+  // };
   return (
     <div className={show1}>
       <div className={sho2}>
@@ -57,18 +63,23 @@ export const Carrito = () => {
             <>
               {carrito.map((producto) => (
                 <div className="carrito__item" key={producto.id}>
-                  <img src={producto.image.default} alt="images" />
+                  <img
+                    src={producto.image.default}
+                    alt="images"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <div>
                     <h3>{producto.title}</h3>
-                    <p className="price">${producto.price}</p>
+                    <p className="price">C$ {producto.price}</p>
                   </div>
-                  <div>
+                  <div className="d-flex align-items-center justify-content-center flex-column">
                     <box-icon
                       name="up-arrow"
                       type="solid"
                       onClick={() => suma(producto.id)}
                     ></box-icon>
-                    <p className="cantidad">{producto.cantidad}</p>
+                    <p className="cantidad mb-0">{producto.cantidad}</p>
                     <box-icon
                       name="down-arrow"
                       type="solid"
@@ -87,8 +98,8 @@ export const Carrito = () => {
           )}
         </div>
         <div className="carrito__footer">
-          <h3>Total : ${total}</h3>
-          <button className="btn">Payment</button>
+          <h3>Total : C${total}</h3>
+          <button className="btn btn-success">Payment</button>
         </div>
       </div>
     </div>

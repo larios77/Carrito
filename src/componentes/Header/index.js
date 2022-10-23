@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Nike from "../../images/Nike.jpg";
+import Logo from "../../images/logo.jpeg";
 import { Link } from "react-router-dom";
 import { DataContext } from "../../context/Dataprovider";
 import "./style.css";
@@ -14,10 +14,16 @@ export const Header = () => {
   };
   return (
     <div>
-      <header>
+      <header className="py-3">
         <Link to="/">
           <div className="logo">
-            <img src={Nike} alt="Nike" width="150" />
+            <img
+              src={Logo}
+              alt="Logo craft"
+              width="80"
+              decoding="async"
+              loading="lazy"
+            />
           </div>
         </Link>
         <ul>

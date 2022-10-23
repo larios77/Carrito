@@ -8,8 +8,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 :root {
-  --main-primary: #08a05c;
-  --main-primary-hover: #056137;
+  --main-primary: #8a5506;
+  --main-primary-hover: #ad6d0d;
   --color-trash: crimson;
   --color-white: #fff;
   --bg: rgba(0, 0, 0, 0.6);
