@@ -1,0 +1,6 @@
+.img__slide {
+  object-fit: cover;
+}
+.title__slider {
+  text-shadow: 2px 2px 2px #000;
+}
